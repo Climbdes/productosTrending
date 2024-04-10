@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar">
+    <!-- Logo -->
+    <a href="/" class="navbar-logo">
+      <img src="assets/resources/dermacollogo.png" alt="Logo" />
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="navbar-nav">
+      <li *ngFor="let categoria of categorias">
+        <a href="#" (click)="toggleCategoria(categoria.categoria)">
+          {{ categoria.categoria }}
+        </a>
+        <ul *ngIf="isCategoriaSeleccionada(categoria.categoria)">
+          <li *ngFor="let subcategoria of categoria.subcategorias">
+            <a href="#">{{ subcategoria }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Search and Icons -->
+    <div class="navbar-icons">
+      <!-- Add search bar and other icons as necessary -->
+    </div>
+  </nav>
+
+  <!-- Hero Image -->
+  <div class="hero">
+    <img src="assets/resources/fondo1.png" alt="Hero Image" />
+  </div>
+</header>
